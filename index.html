@@ -496,24 +496,27 @@
   }
 
   // ===== CHARGEMENT DES PLAYLISTS =====
-  async function loadPlaylists() {
-    try {
-      const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet&maxResults=20`);
-      const data = await response.json();
-      
-      if(data.error) {
-        console.error("Erreur API:", data.error);
-        document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;color:red;">❌ Erreur de chargement des playlists</div>';
-        return;
-      }
-      
-      playlists = data.items || [];
-      
-      if(playlists.length === 0) {
-        document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;">📭 Aucune playlist trouvée</div>';
-        return;
-      }
-      
+	async function loadPlaylists() {
+	  try {
+		const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet&maxResults=20`);
+		const data = await response.json();
+		
+		if(data.error) {
+		  console.error("Erreur API:", data.error);
+		  document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;color:red;">❌ Erreur de chargement des playlists</div>';
+		  return;
+		}
+		
+		playlists = data.items || [];
+		
+		// 🔽 AJOUTE CE TRI POUR "Playlist 1", "Playlist 2", etc. 🔽
+		playlists.sort((a, b) => {
+		  // Extrait le numéro de la playlist (ex: "Playlist 1" -> 1)
+		  const numA = parseInt(a.snippet.title.match(/\d+/)?.[0] || 0);
+		  const numB = parseInt(b.snippet.title.match(/\d+/)?.[0] || 0);
+		  return numA - numB;  // Ordre croissant (1,2,3...)
+		  // ou return numB - numA; pour ordre décroissant (...,3,2,1)
+		});      
       // Afficher les playlists
       const container = document.getElementById('playlistList');
       container.innerHTML = '';
