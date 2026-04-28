@@ -88,7 +88,22 @@
     padding: 0 15px;
     gap: 20px;
   }
-
+/* PIED DE PAGE */
+  footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+  }
+  footer a {
+    color: #f39c12;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
   /* SECTIONS GAUCHE - PLAYLISTS */
   .playlists-sidebar {
     width: 280px;
@@ -381,7 +396,15 @@
     <button type="submit">✉️ Envoyer</button>
   </form>
 </div>
-
+<footer>
+  <p>© 2024 Jean-Baptiste Kibora - Se former en Géomatique</p>
+  <p>
+    <a href="youtube.com/@cefogia?sub_confirmation=1" target="_blank" rel="noopener noreferrer">📺 S'abonner sur YouTube</a> |
+    <a href="#" onclick="showSection('contact'); return false;">📧 Contact</a> |
+    <a href="#" onclick="showSection('videos'); return false;">🎬 Tutoriels</a>
+  </p>
+  <p style="font-size: 0.8em; margin-top: 10px;">Formations SIG - ArcGIS - QGIS - Cartographie - Géoportail</p>
+</footer>
 <script>
   // ===== CONFIGURATION =====
   // ⚠️ REMPLACE CHANNEL_ID PAR L'ID DE TA CHAÎNE YOUTUBE ⚠️
