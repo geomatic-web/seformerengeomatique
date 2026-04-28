@@ -2,66 +2,16 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Se former en Géomatique | Tutoriels SIG ArcGIS QGIS | Jean-Baptiste Kibora</title>
-<meta name="description" content="Apprenez la géomatique avec Jean-Baptiste Kibora. Tutoriels vidéo pour ArcGIS, QGIS et outils SIG. Formations professionnelles et accompagnement personnalisé.">
-<meta name="keywords" content="Kibora Jean-baptiste,Kibora,Expert SIG,Cartographie,géomatique,SIG,ArcGIS,QGIS,tutoriels vidéo,formation en ligne,Burkina Faso">
-<meta name="author" content="Jean-Baptiste Kibora">
-<meta name="robots" content="index, follow">
-<meta name="language" content="French">
-
-<!-- Open Graph pour les réseaux sociaux -->
-<meta property="og:title" content="Se former en Géomatique - Jean-Baptiste Kibora">
-<meta property="og:description" content="Tutoriels SIG, formations ArcGIS/QGIS et accompagnement professionnel en géomatique.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://seformerengeomatique.com">
-<meta property="og:image" content="https://yt3.ggpht.com/OSg1bOXHHu9pe8hFlTPFIj_zLvbu1JKpGM8SWhkSgwZg9IjBeQ8CF7lmtEPFiNQGzmYj-84T_Iw=s600-c-k-c0x00ffffff-no-rj-rp-mo">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Se former en Géomatique">
-<meta name="twitter:description" content="Tutoriels et formations en géomatique avec Jean-Baptiste Kibora">
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="https://yt3.ggpht.com/OSg1bOXHHu9pe8hFlTPFIj_zLvbu1JKpGM8SWhkSgwZg9IjBeQ8CF7lmtEPFiNQGzmYj-84T_Iw=s32-c-c-k-c0x00ffffff-no-rj" sizes="32x32">
-<link rel="apple-touch-icon" href="https://yt3.ggpht.com/OSg1bOXHHu9pe8hFlTPFIj_zLvbu1JKpGM8SWhkSgwZg9IjBeQ8CF7lmtEPFiNQGzmYj-84T_Iw=s180-c-c-k-c0x00ffffff-no-rj">
-
-<!-- Préconnexions pour améliorer les performances -->
-<link rel="preconnect" href="https://www.youtube.com">
-<link rel="preconnect" href="https://www.googleapis.com">
-<link rel="dns-prefetch" href="https://yt3.ggpht.com">
-<link rel="preconnect" href="https://formspree.io">
-
-<!-- Style principal -->
+<title>Se former en Géomatique - Jean-Baptiste Kibora</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   
   body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif; 
-    margin: 0; 
+    font-family: 'Segoe UI', Arial, sans-serif; 
     background: #f4f4f4; 
     color: #2c3e50; 
-    transition: background 0.3s, color 0.3s;
-    line-height: 1.6;
-  }
-
-  /* SKIP LINK - Accessibilité */
-  .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #f39c12;
-    color: #2c3e50;
-    padding: 8px 16px;
-    z-index: 1000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 0 0 4px 0;
-  }
-  .skip-link:focus { 
-    top: 0;
-    outline: 2px solid #fff;
+    transition: all 0.3s;
   }
 
   /* HEADER */
@@ -69,37 +19,21 @@
     background: #2c3e50; 
     color: white; 
     text-align: center; 
-    padding: 20px 15px; 
+    padding: 15px; 
     position: relative; 
   }
-  header a { 
-    color: #f39c12; 
-    text-decoration: underline; 
-  }
-  header a:hover { 
-    color: #e67e22; 
-  }
   header img { 
-    width: 60px; 
-    height: 60px;
+    width: 50px; 
     border-radius: 50%; 
-    margin-right: 10px; 
-    vertical-align: middle; 
-    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 10px;
   }
   .header-title { 
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    font-size: 1.5em; 
-    margin-bottom: 10px; 
-    flex-wrap: wrap;
+    font-size: 1.3em; 
   }
-  header p { 
-    margin-top: 5px; 
-  }
-
-  /* DARK MODE BUTTON */
   #toggleTheme { 
     position: absolute; 
     top: 15px; 
@@ -111,24 +45,14 @@
     cursor: pointer; 
     border-radius: 6px; 
     font-weight: bold;
-    transition: all 0.3s ease;
-  }
-  #toggleTheme:hover { 
-    background: #e67e22; 
-    transform: scale(1.05);
   }
 
-  /* NAVIGATION */
+  /* NAVIGATION PRINCIPALE */
   nav {
     background: #34495e;
-    position: sticky;
-    top: 0;
-    z-index: 100;
   }
   nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -138,706 +62,531 @@
   }
   nav ul li a {
     display: block;
-    padding: 14px 24px;
+    padding: 12px 20px;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
   }
-  nav ul li:hover {
-    background: #2c3e50;
-  }
-  /* SOUS-MENU */
+  nav ul li:hover { background: #2c3e50; }
   nav ul li ul {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 45px;
     left: 0;
     background: #34495e;
-    min-width: 220px;
-    border-radius: 0 0 5px 5px;
+    min-width: 200px;
     z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   }
-  nav ul li:hover ul {
-    display: block;
-  }
-  nav ul li ul li {
-    width: 100%;
-  }
-  nav ul li ul li a {
-    padding: 10px 20px;
-    font-weight: normal;
-  }
-  nav ul li ul li a:hover {
-    background: #2c3e50;
-  }
+  nav ul li:hover ul { display: block; }
+  nav ul li ul li a { padding: 10px; }
 
-  /* SECTIONS */
-  main { 
-    margin: 20px; 
-    max-width: 1200px;
+  /* LAYOUT PRINCIPAL: PLAYLISTS À GAUCHE + VIDEO À DROITE */
+  .main-container {
+    display: flex;
+    max-width: 1400px;
     margin: 20px auto;
     padding: 0 15px;
-  }
-  .content-section { 
-    display: none; 
-    animation: fadeIn 0.3s ease;
-  }
-  .content-section.active { 
-    display: block; 
-    background: white; 
-    padding: 25px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    gap: 20px;
   }
 
-  h2 { 
-    color: #34495e; 
-    border-bottom: 3px solid #f39c12;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-  }
-  
-  ul.project-list { 
-    list-style: none; 
-    padding-left: 0;
-  }
-  ul.project-list li { 
-    margin-bottom: 12px; 
-    padding-left: 24px;
-    position: relative;
-  }
-  ul.project-list li:before {
-    content: "▹";
-    color: #f39c12;
-    position: absolute;
-    left: 0;
-  }
-  ul.project-list li a { 
-    color: #2980b9; 
-    text-decoration: none; 
-    transition: color 0.3s;
-  }
-  ul.project-list li a:hover { 
-    text-decoration: underline; 
-    color: #1a5276;
-  }
-
-  /* SECTION VIDÉO */
-  .main-video { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    margin-bottom: 30px; 
-  }
-  #mainPlayer { 
-    width: 100%; 
-    max-width: 1000px; 
-    height: 500px; 
-    border-radius: 12px; 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2); 
-    background: #000;
-  }
-  #currentTitle { 
-    margin-top: 15px; 
-    font-size: 1.2em; 
-    text-align: center; 
-    max-width: 90%; 
-    word-wrap: break-word; 
-    color: #2c3e50;
-  }
-  .controls { 
-    margin-top: 15px; 
-    display: flex; 
-    gap: 15px; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-  }
-  button { 
-    background: #2c3e50; 
-    color: white; 
-    border: none; 
-    padding: 10px 24px; 
-    cursor: pointer; 
-    border-radius: 6px; 
-    transition: all 0.3s ease; 
-    font-weight: bold;
-    font-size: 14px;
-  }
-  button:hover { 
-    background: #34495e; 
-    transform: translateY(-2px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  button:active {
-    transform: translateY(0);
-  }
-
-  /* MINIATURES */
-  .thumbnails-container {
-    position: relative;
-  }
-  .thumbnails { 
-    display: flex; 
-    overflow-x: auto; 
-    gap: 12px; 
-    padding: 20px 10px; 
-    justify-content: flex-start; 
-    background: #e8e8e8; 
+  /* SECTIONS GAUCHE - PLAYLISTS */
+  .playlists-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: white;
     border-radius: 12px;
-    scroll-behavior: smooth;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    align-self: start;
   }
-  .thumbnails::-webkit-scrollbar {
-    height: 8px;
-  }
-  .thumbnails::-webkit-scrollbar-track {
-    background: #ddd;
-    border-radius: 4px;
-  }
-  .thumbnails::-webkit-scrollbar-thumb {
-    background: #f39c12;
-    border-radius: 4px;
-  }
-  .thumbnail { 
-    cursor: pointer; 
-    flex: 0 0 auto; 
-    border: 3px solid transparent; 
-    border-radius: 10px; 
-    transition: all 0.3s ease;
-  }
-  .thumbnail.active { 
-    border: 3px solid #f39c12; 
-    transform: scale(1.02);
-  }
-  .thumbnail img { 
-    width: 160px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-    transition: transform 0.2s;
-    display: block;
-  }
-  .thumbnail img:hover { 
-    transform: scale(1.05); 
-  }
-
-  /* INDICATEUR DE CHARGEMENT */
-  .loader {
-    display: none;
-    width: 50px;
-    height: 50px;
-    border: 4px solid #e0e0e0;
-    border-top: 4px solid #f39c12;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 30px auto;
-  }
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  body.loading .loader { display: block; }
-  body.loading .thumbnails { opacity: 0.5; pointer-events: none; }
-  body.loading #mainPlayer { opacity: 0.5; }
-
-  /* FORMULAIRE DE CONTACT */
-  .contact-form {
-    max-width: 600px;
-    margin: auto;
-  }
-  .contact-form label {
-    font-weight: bold;
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-family: inherit;
-    transition: border 0.3s;
-  }
-  .contact-form input:focus,
-  .contact-form textarea:focus {
-    outline: none;
-    border-color: #f39c12;
-    box-shadow: 0 0 0 2px rgba(243,156,18,0.2);
-  }
-  .contact-form button {
-    margin-top: 20px;
-    width: 100%;
-    background: #f39c12;
-    color: #2c3e50;
-    font-size: 16px;
-  }
-  .contact-form button:hover {
-    background: #e67e22;
-  }
-  .whatsapp-link {
-    text-align: center;
-    margin-bottom: 25px;
-    padding: 15px;
-    background: #25D366;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-    max-width: 300px;
-  }
-  .whatsapp-link:hover {
-    background: #128C7E;
-    transform: scale(1.02);
-  }
-
-  /* PIED DE PAGE */
-  footer {
+  .playlists-header {
     background: #2c3e50;
     color: white;
+    padding: 15px;
+    font-weight: bold;
     text-align: center;
-    padding: 25px 20px;
-    margin-top: 40px;
   }
-  footer a {
-    color: #f39c12;
-    text-decoration: none;
-    margin: 0 10px;
+  .playlist-list {
+    max-height: 70vh;
+    overflow-y: auto;
   }
-  footer a:hover {
-    text-decoration: underline;
+  .playlist-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
+  .playlist-item:hover {
+    background: #f0f0f0;
+  }
+  .playlist-item.active {
+    background: #f39c12;
+    color: white;
+  }
+  .playlist-icon {
+    font-size: 1.2em;
+  }
+  .playlist-name {
+    flex: 1;
+    font-weight: 500;
+  }
+  .playlist-count {
+    font-size: 0.8em;
+    background: #ddd;
+    padding: 2px 6px;
+    border-radius: 10px;
+  }
+  .playlist-item.active .playlist-count {
+    background: white;
+    color: #2c3e50;
+  }
+
+  /* SECTION DROITE - VIDEO */
+  .video-content {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  .main-video {
+    margin-bottom: 20px;
+  }
+  #mainPlayer {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background: #000;
+  }
+  #currentTitle {
+    margin: 15px 0;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  .controls {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-weight: bold;
+  }
+  button:hover {
+    background: #f39c12;
+    color: #2c3e50;
+    transform: scale(1.02);
+  }
+
+  /* LISTE DES VIDÉOS DE LA PLAYLIST */
+  .videos-list {
+    margin-top: 20px;
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+  }
+  .videos-list h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  .video-items {
+    max-height: 250px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .video-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+  .video-item:hover {
+    background: #f0f0f0;
+  }
+  .video-item.active {
+    background: #f39c12;
+    color: white;
+  }
+  .video-thumb {
+    width: 80px;
+    height: 45px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  .video-title {
+    flex: 1;
+    font-size: 0.9em;
+  }
+  .video-duration {
+    font-size: 0.75em;
+    color: #888;
+  }
+
+  /* AUTRES SECTIONS (expertises, contact) */
+  .other-sections {
+    display: none;
+  }
+  .other-sections.active {
+    display: block;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  h2 { color: #34495e; border-bottom: 3px solid #f39c12; padding-bottom: 10px; margin-bottom: 20px; }
+  ul.project-list { list-style: none; padding-left: 0; }
+  ul.project-list li { margin-bottom: 12px; padding-left: 24px; position: relative; }
+  ul.project-list li:before { content: "▹"; color: #f39c12; position: absolute; left: 0; }
+  .whatsapp-btn { display: inline-block; background: #25D366; color: white; padding: 12px 24px; border-radius: 10px; text-decoration: none; margin: 10px 0; }
+  .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ddd; border-radius: 6px; }
 
   /* MODE SOMBRE */
-  body.dark { 
-    background: #121212; 
-    color: #e0e0e0; 
-  }
-  body.dark header { 
-    background: #1a1a2e; 
-  }
-  body.dark nav { 
-    background: #1a1a2e; 
-  }
-  body.dark nav ul li:hover {
-    background: #16213e;
-  }
-  body.dark nav ul li ul {
-    background: #1a1a2e;
-  }
-  body.dark .thumbnails { 
-    background: #1e1e2e; 
-  }
-  body.dark button { 
-    background: #0f3460; 
-  }
-  body.dark button:hover { 
-    background: #16213e; 
-  }
-  body.dark .content-section.active { 
-    background: #1e1e2e; 
-    color: #e0e0e0; 
-  }
-  body.dark h2 { 
-    color: #f39c12; 
-  }
-  body.dark ul.project-list li a {
-    color: #5dade2;
-  }
-  body.dark #currentTitle {
-    color: #e0e0e0;
-  }
+  body.dark { background: #121212; }
+  body.dark header, body.dark nav, body.dark .playlists-sidebar, body.dark .video-content, body.dark .other-sections.active { background: #1e1e2e; color: #e0e0e0; }
+  body.dark .playlist-item { border-bottom-color: #333; }
+  body.dark .playlist-item:hover { background: #2a2a3e; }
+  body.dark .video-item:hover { background: #2a2a3e; }
+  body.dark h2 { color: #f39c12; }
+  body.dark .videos-list { border-top-color: #333; }
 
-  /* RESPONSIVE */
   @media (max-width: 768px) {
-    #mainPlayer { 
-      height: 300px; 
-    }
-    .thumbnail img { 
-      width: 120px; 
-    }
-    .header-title { 
-      font-size: 1.2em; 
-      flex-direction: column;
-    }
-    header img {
-      margin-right: 0;
-      margin-bottom: 8px;
-    }
-    nav ul li a {
-      padding: 10px 16px;
-      font-size: 14px;
-    }
-    .content-section.active {
-      padding: 15px;
-    }
-    h2 {
-      font-size: 1.3em;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #mainPlayer { 
-      height: 220px; 
-    }
-    .thumbnail img { 
-      width: 100px; 
-    }
-    .controls button {
-      padding: 8px 16px;
-      font-size: 12px;
-    }
-    nav ul li a {
-      padding: 8px 12px;
-      font-size: 12px;
-    }
-  }
-
-  /* Message d'erreur */
-  .error-message {
-    background: #e74c3c;
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    margin: 20px;
+    .main-container { flex-direction: column; }
+    .playlists-sidebar { width: 100%; }
+    #mainPlayer { height: 300px; }
+    .video-thumb { width: 60px; height: 34px; }
   }
 </style>
 </head>
 <body>
 
-<a href="#main-content" class="skip-link">Aller au contenu principal</a>
-
 <header>
   <div class="header-title">
-    <img src="https://yt3.ggpht.com/OSg1bOXHHu9pe8hFlTPFIj_zLvbu1JKpGM8SWhkSgwZg9IjBeQ8CF7lmtEPFiNQGzmYj-84T_Iw=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Logo de la chaîne Se former en Géomatique" loading="lazy">
-    <span>Se former en Géomatique</span>
+    <img src="https://yt3.ggpht.com/OSg1bOXHHu9pe8hFlTPFIj_zLvbu1JKpGM8SWhkSgwZg9IjBeQ8CF7lmtEPFiNQGzmYj-84T_Iw=s600-c-k-c0x00ffffff-no-rj-rp-mo" alt="Logo">
+    Se former en Géomatique
   </div>
-  <p>Formateur expert : <a href="https://doyoubuzz.com/jean-baptiste-kibora" target="_blank" rel="noopener noreferrer">Jean-Baptiste Kibora</a> | <a href="https://youtube.com/@Seformerengeomatique?sub_confirmation=1" target="_blank" rel="noopener noreferrer">📺 S'abonner à la chaîne YouTube</a></p>
-  <button id="toggleTheme" aria-label="Activer/désactiver le mode sombre">🌙 Mode sombre</button>
+  <p>Formateur : Jean-Baptiste Kibora | <a href="outube.com/@cefogia?sub_confirmation=1" target="_blank" style="color:#f39c12;">📺 YouTube</a></p>
+  <button id="toggleTheme">🌙 Mode sombre</button>
 </header>
 
-<!-- NAVIGATION PRINCIPALE -->
-<nav role="navigation" aria-label="Menu principal">
+<nav>
   <ul>
-    <li><a href="#" onclick="showSection('videos'); return false;">🎬 Tutoriels SIG</a></li>
+    <li><a href="#" onclick="showMainContent(true); return false;">🎬 Tutoriels SIG</a></li>
     <li>
-      <a href="#" aria-haspopup="true">📂 Domaines d'expertise ▾</a>
+      <a href="#">📂 Domaines d'expertise ▾</a>
       <ul>
-        <li><a href="#" onclick="showSection('geoportail'); return false;">🗺️ Géoportail</a></li>
-        <li><a href="#" onclick="showSection('telecom'); return false;">📡 Télécommunication</a></li>
-        <li><a href="#" onclick="showSection('energie'); return false;">⚡ Énergie</a></li>
-        <li><a href="#" onclick="showSection('formation'); return false;">🎓 Formation</a></li>
+        <li><a href="#" onclick="showOtherSection('geoportail')">🗺️ Géoportail</a></li>
+        <li><a href="#" onclick="showOtherSection('telecom')">📡 Télécommunication</a></li>
+        <li><a href="#" onclick="showOtherSection('energie')">⚡ Énergie</a></li>
+        <li><a href="#" onclick="showOtherSection('formation')">🎓 Formation</a></li>
       </ul>
     </li>
-    <li><a href="#" onclick="showSection('contact'); return false;">📧 Contact</a></li>
+    <li><a href="#" onclick="showOtherSection('contact')">📧 Contact</a></li>
   </ul>
 </nav>
 
-<main id="main-content">
-  <!-- INDICATEUR DE CHARGEMENT -->
-  <div class="loader"></div>
+<!-- CONTENU PRINCIPAL: PLAYLISTS À GAUCHE + VIDÉOS -->
+<div id="mainContent" class="main-container">
+  <!-- COLONNE GAUCHE: PLAYLISTS -->
+  <div class="playlists-sidebar">
+    <div class="playlists-header">
+      📚 Mes Playlists
+    </div>
+    <div class="playlist-list" id="playlistList">
+      <!-- Les playlists seront chargées ici -->
+      <div style="text-align: center; padding: 20px;">Chargement des playlists...</div>
+    </div>
+  </div>
 
-  <!-- SECTION VIDEOS -->
-  <section id="videos" class="content-section active">
+  <!-- COLONNE DROITE: VIDEO + LISTE DES VIDEOS -->
+  <div class="video-content">
     <div class="main-video">
       <div id="mainPlayer"></div>
       <h2 id="currentTitle"></h2>
       <div class="controls">
-        <button id="prevBtn" aria-label="Vidéo précédente">⬅️ Précédent</button>
-        <button id="nextBtn" aria-label="Vidéo suivante">➡️ Suivant</button>
+        <button id="prevBtn">⬅️ Précédent</button>
+        <button id="nextBtn">➡️ Suivant</button>
       </div>
     </div>
-    <div class="thumbnails-container">
-      <div class="thumbnails" id="thumbnails"></div>
+    <div class="videos-list">
+      <h3>📋 Vidéos de la playlist</h3>
+      <div class="video-items" id="videoItems">
+        <!-- Les vidéos de la playlist sélectionnée -->
+      </div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- SECTION GEOPORTAIL -->
-  <section id="geoportail" class="content-section">
-    <h2>🗺️ Projets Géoportail</h2>
-    <ul class="project-list">
-      <li>Développement de portails cartographiques sur mesure</li>
-      <li><a href="#" onclick="alert('Site en cours de développement. Contactez-moi pour plus d\'informations.'); return false;">🌐 Géoportail BUMIGEB</a></li>
-      <li><a href="http://fermiers-bf.com/" target="_blank" rel="noopener noreferrer">🌾 Géoportail des fermiers</a></li>
-      <li><a href="https://dhpcs-bf.com/" target="_blank" rel="noopener noreferrer">🏥 Géoportail des OSC partenaires - Projet DHCPS</a></li>
-    </ul>
-  </section>
+<!-- AUTRES SECTIONS (expertises, contact) -->
+<div id="geoportail" class="other-sections">
+  <h2>🗺️ Géoportail</h2>
+  <ul class="project-list">
+    <li>Développement de portails cartographiques</li>
+    <li><a href="http://fermiers-bf.com/" target="_blank">Géoportail des fermiers</a></li>
+    <li><a href="https://dhpcs-bf.com/" target="_blank">Géoportail DHCPS</a></li>
+  </ul>
+</div>
 
-  <!-- SECTION TELECOM -->
-  <section id="telecom" class="content-section">
-    <h2>📡 Télécommunication</h2>
-    <ul class="project-list">
-      <li>Mise en place d'un outil de supervision des équipements actifs du réseau exploitant les données géospatiales</li>
-      <li>Projet d'Appui au développement des TIC - Supervision réseau et infrastructure</li>
-    </ul>
-  </section>
+<div id="telecom" class="other-sections">
+  <h2>📡 Télécommunication</h2>
+  <ul class="project-list">
+    <li>Supervision des équipements réseau - Projet TIC</li>
+  </ul>
+</div>
 
-  <!-- SECTION ENERGIE -->
-  <section id="energie" class="content-section">
-    <h2>⚡ Énergie & Électrification</h2>
-    <ul class="project-list">
-      <li>Étude de faisabilité pour l'électrification de 50 localités par mini centrales vertes - Projet MRV-50 localités – KIS-ENERGY/ABER</li>
-      <li>Étude de faisabilité pour l'électrification de 500 localités - Projet VENEEN 500 localités - KIS-ENERGY/ABER</li>
-      <li>Cartographie de base pour l'électrification de 213 villages - Projet AFD Niger - IED</li>
-      <li>Cartographie des extensions réseaux BT - Projet densification HTA - KIS-ENERGY/ABER</li>
-      <li>Analyse de la demande - Projet ERD ZIGO - EDIS/ABER</li>
-    </ul>
-  </section>
+<div id="energie" class="other-sections">
+  <h2>⚡ Énergie</h2>
+  <ul class="project-list">
+    <li>Électrification 50 localités - Projet MRV-50</li>
+    <li>Électrification 500 localités - Projet VENEEN</li>
+    <li>Cartographie 213 villages - Projet AFD Niger</li>
+  </ul>
+</div>
 
-  <!-- SECTION FORMATION -->
-  <section id="formation" class="content-section">
-    <h2>🎓 Formations dispensées</h2>
-    <ul class="project-list">
-      <li>Formation SIG des agents de la SONABEL</li>
-      <li>Formation SIG des agents du Ministère des infrastructures</li>
-      <li>Formation SIG des agents du BUNASOL</li>
-      <li>Formation SIG des agents du BUMIGEB</li>
-      <li>Formation SIG des agents du Ministère de la justice</li>
-      <li>Formation SIG des agents du Projet PRECA</li>
-    </ul>
-    <p style="margin-top: 20px; padding: 15px; background: #f39c12; color: #2c3e50; border-radius: 8px; text-align: center;">
-      💡 <strong>Formation disponible en présentiel ou à distance</strong> - Contactez-moi pour un devis personnalisé
-    </p>
-  </section>
+<div id="formation" class="other-sections">
+  <h2>🎓 Formations</h2>
+  <ul class="project-list">
+    <li>Formation SIG - SONABEL</li>
+    <li>Formation SIG - Ministère des infrastructures</li>
+    <li>Formation SIG - BUNASOL</li>
+    <li>Formation SIG - BUMIGEB</li>
+    <li>Formation SIG - Ministère de la justice</li>
+  </ul>
+</div>
 
-  <!-- SECTION CONTACT -->
-  <section id="contact" class="content-section">
-    <h2>📞 Contactez-moi</h2>
-    <div style="text-align: center;">
-      <a href="https://wa.me/22664412514?text=Bonjour%20Jean-Baptiste,%20je%20suis%20intéressé(e)%20par%20vos%20formations%20en%20géomatique." 
-         target="_blank" 
-         rel="noopener noreferrer" 
-         class="whatsapp-link">
-         💬 Me contacter sur WhatsApp au +226 64 41 25 14
-      </a>
-    </div>
-    
-    <p style="text-align: center; margin: 20px 0;">Ou écrivez-moi via le formulaire ci-dessous :</p>
-    
-    <form action="https://formspree.io/f/xeoldgay" method="POST" class="contact-form">
-      <label for="name">📝 Votre nom :</label>
-      <input type="text" id="name" name="name" required placeholder="Jean kibora">
-      
-      <label for="email">📧 Votre email :</label>
-      <input type="email" id="email" name="email" required placeholder="jean@exemple.com">
-      
-      <label for="message">💬 Votre message :</label>
-      <textarea id="message" name="message" rows="6" required placeholder="Décrivez votre projet ou votre besoin de formation..."></textarea>
-      
-      <button type="submit">✉️ Envoyer le message</button>
-    </form>
-  </section>
-</main>
-
-<footer>
-  <p>© 2024 Jean-Baptiste Kibora - Se former en Géomatique</p>
-  <p>
-    <a href="youtube.com/@cefogia?sub_confirmation=1" target="_blank" rel="noopener noreferrer">📺 S'abonner sur YouTube</a> |
-    <a href="#" onclick="showSection('contact'); return false;">📧 Contact</a> |
-    <a href="#" onclick="showSection('videos'); return false;">🎬 Tutoriels</a>
-  </p>
-  <p style="font-size: 0.8em; margin-top: 10px;">Formations SIG - ArcGIS - QGIS - Cartographie - Géoportail</p>
-</footer>
+<div id="contact" class="other-sections">
+  <h2>📞 Contact</h2>
+  <div style="text-align: center;">
+    <a href="https://wa.me/22664412514" target="_blank" class="whatsapp-btn">💬 WhatsApp: +226 64 41 25 14</a>
+  </div>
+  <form action="https://formspree.io/f/xeoldgay" method="POST" class="contact-form">
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+    <button type="submit">✉️ Envoyer</button>
+  </form>
+</div>
 
 <script>
-  // ⚠️ IMPORTANT : Remplacez cette clé par votre propre clé API YouTube
-  // Créez une clé sur : https://console.cloud.google.com/apis/credentials
-  // ET RESTREIGNEZ-LA à votre domaine uniquement !
-  const API_KEY = "AIzaSyCpm3GRsd1InPjeFJgA9vANu3tPMY222p8"; // À remplacer par votre clé sécurisée
+  // ===== CONFIGURATION =====
+  // ⚠️ REMPLACE CHANNEL_ID PAR L'ID DE TA CHAÎNE YOUTUBE ⚠️
   const CHANNEL_ID = "UCwjUnlXoWvX4PAcMK2Xj4JA";
-  const MAX_RESULTS = 12;
+  const API_KEY = "AIzaSyCpm3GRsd1InPjeFJgA9vANu3tPMY222p8";  // Remplace par ta clé API
   
-  let videoList = [];
-  let currentIndex = 0;
+  let playlists = [];
+  let currentPlaylistId = null;
+  let currentPlaylistVideos = [];
+  let currentVideoIndex = 0;
   let player = null;
   let playerReady = false;
 
-  // Afficher une section
-  function showSection(sectionId) {
-    document.querySelectorAll('.content-section').forEach(section => {
-      section.classList.remove('active');
-    });
+  // ===== FONCTIONS D'AFFICHAGE =====
+  function showMainContent(show) {
+    document.getElementById('mainContent').style.display = show ? 'flex' : 'none';
+    document.querySelectorAll('.other-sections').forEach(s => s.classList.remove('active'));
+  }
+  
+  function showOtherSection(sectionId) {
+    document.getElementById('mainContent').style.display = 'none';
+    document.querySelectorAll('.other-sections').forEach(s => s.classList.remove('active'));
     document.getElementById(sectionId).classList.add('active');
-    
-    // Sauvegarder la section active dans localStorage
-    localStorage.setItem('activeSection', sectionId);
-    
-    // Scroll en haut de la page
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  // Charger la vidéo
-  function loadVideo(index) {
-    if (!videoList[index] || !player || !playerReady) return;
+  // ===== CHARGEMENT DES PLAYLISTS =====
+  async function loadPlaylists() {
+    try {
+      const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet&maxResults=20`);
+      const data = await response.json();
+      
+      if(data.error) {
+        console.error("Erreur API:", data.error);
+        document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;color:red;">❌ Erreur de chargement des playlists</div>';
+        return;
+      }
+      
+      playlists = data.items || [];
+      
+      if(playlists.length === 0) {
+        document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;">📭 Aucune playlist trouvée</div>';
+        return;
+      }
+      
+      // Afficher les playlists
+      const container = document.getElementById('playlistList');
+      container.innerHTML = '';
+      
+      playlists.forEach((playlist, index) => {
+        const div = document.createElement('div');
+        div.className = 'playlist-item';
+        if(index === 0) div.classList.add('active');
+        div.innerHTML = `
+          <span class="playlist-icon">📁</span>
+          <span class="playlist-name">${escapeHtml(playlist.snippet.title)}</span>
+          <span class="playlist-count">📹</span>
+        `;
+        div.onclick = () => selectPlaylist(playlist.id, playlist.snippet.title);
+        container.appendChild(div);
+      });
+      
+      // Charger la première playlist
+      if(playlists[0]) {
+        selectPlaylist(playlists[0].id, playlists[0].snippet.title);
+      }
+      
+    } catch(err) {
+      console.error("Erreur:", err);
+      document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;color:red;">❌ Erreur réseau</div>';
+    }
+  }
+
+  // ===== CHARGEMENT DES VIDÉOS D'UNE PLAYLIST =====
+  async function selectPlaylist(playlistId, playlistTitle) {
+    currentPlaylistId = playlistId;
     
-    currentIndex = index;
-    player.loadVideoById(videoList[index].id);
-    document.getElementById("currentTitle").innerHTML = `<strong>▶️ Lecture :</strong> ${videoList[index].title}`;
-    
-    // Mettre à jour la miniature active
-    const thumbnails = document.querySelectorAll(".thumbnail");
-    thumbnails.forEach((thumb, i) => {
-      thumb.classList.toggle("active", i === index);
+    // Mettre à jour l'UI des playlists
+    document.querySelectorAll('.playlist-item').forEach((item, i) => {
+      item.classList.toggle('active', playlists[i] && playlists[i].id === playlistId);
     });
     
-    // Scroll vers la miniature active
-    const activeThumb = thumbnails[index];
-    if (activeThumb) {
-      activeThumb.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    try {
+      const response = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${playlistId}&part=snippet&maxResults=50`);
+      const data = await response.json();
+      
+      if(data.error) throw new Error(data.error.message);
+      
+      currentPlaylistVideos = data.items.filter(item => item.snippet.resourceId.videoId).map(item => ({
+        id: item.snippet.resourceId.videoId,
+        title: item.snippet.title,
+        thumbnail: item.snippet.thumbnails.medium.url,
+        duration: item.snippet.description // pas de durée directe
+      }));
+      
+      // Afficher la liste des vidéos
+      const videoContainer = document.getElementById('videoItems');
+      videoContainer.innerHTML = '';
+      
+      currentPlaylistVideos.forEach((video, index) => {
+        const div = document.createElement('div');
+        div.className = 'video-item';
+        if(index === 0) div.classList.add('active');
+        div.innerHTML = `
+          <img class="video-thumb" src="${video.thumbnail}" alt="${escapeHtml(video.title)}">
+          <span class="video-title">${escapeHtml(video.title.substring(0, 60))}${video.title.length > 60 ? '...' : ''}</span>
+        `;
+        div.onclick = () => playVideoFromPlaylist(index);
+        videoContainer.appendChild(div);
+      });
+      
+      // Jouer la première vidéo
+      if(currentPlaylistVideos.length > 0) {
+        playVideoFromPlaylist(0);
+      } else {
+        document.getElementById('currentTitle').textContent = "Aucune vidéo dans cette playlist";
+      }
+      
+    } catch(err) {
+      console.error("Erreur chargement vidéos:", err);
+      document.getElementById('videoItems').innerHTML = '<div style="padding:20px;text-align:center;color:red;">❌ Erreur de chargement</div>';
     }
   }
 
-  function prevVideo() { 
-    if (videoList.length) {
-      loadVideo((currentIndex - 1 + videoList.length) % videoList.length); 
+  // ===== LECTEUR VIDÉO =====
+  function playVideoFromPlaylist(index) {
+    if(!currentPlaylistVideos[index]) return;
+    
+    currentVideoIndex = index;
+    const video = currentPlaylistVideos[index];
+    
+    if(player && playerReady) {
+      player.loadVideoById(video.id);
+    }
+    
+    document.getElementById('currentTitle').textContent = video.title;
+    
+    // Mettre à jour l'active dans la liste
+    document.querySelectorAll('.video-item').forEach((item, i) => {
+      item.classList.toggle('active', i === index);
+    });
+    
+    // Scroll vers la vidéo active
+    const activeItem = document.querySelector('.video-item.active');
+    if(activeItem) {
+      activeItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }
   
-  function nextVideo() { 
-    if (videoList.length) {
-      loadVideo((currentIndex + 1) % videoList.length); 
-    }
-  }
-
-  // Mode sombre
-  const toggleBtn = document.getElementById("toggleTheme");
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    localStorage.setItem('darkMode', document.body.classList.contains('dark'));
-    toggleBtn.textContent = document.body.classList.contains('dark') ? "☀️ Mode clair" : "🌙 Mode sombre";
-  });
-
-  // Restaurer les préférences utilisateur
-  if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark');
-    toggleBtn.textContent = "☀️ Mode clair";
+  function prevVideo() {
+    if(currentPlaylistVideos.length === 0) return;
+    const newIndex = (currentVideoIndex - 1 + currentPlaylistVideos.length) % currentPlaylistVideos.length;
+    playVideoFromPlaylist(newIndex);
   }
   
-  const savedSection = localStorage.getItem('activeSection');
-  if (savedSection && document.getElementById(savedSection)) {
-    showSection(savedSection);
+  function nextVideo() {
+    if(currentPlaylistVideos.length === 0) return;
+    const newIndex = (currentVideoIndex + 1) % currentPlaylistVideos.length;
+    playVideoFromPlaylist(newIndex);
   }
 
-  // YouTube API
+  // ===== INITIALISATION YOUTUBE =====
   let tag = document.createElement("script");
   tag.src = "https://www.youtube.com/iframe_api";
-  let firstScriptTag = document.getElementsByTagName("script")[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  window.onYouTubeIframeAPIReady = function() {
+  document.body.appendChild(tag);
+  
+  function onYouTubeIframeAPIReady() {
     player = new YT.Player("mainPlayer", {
-      height: "500",
+      height: "450",
       width: "100%",
       videoId: "",
       playerVars: {
-        'autoplay': 0,
-        'rel': 0,
-        'modestbranding': 1
+        'origin': window.location.origin || 'https://www.youtube.com'
       },
       events: {
-        "onReady": onPlayerReady,
-        "onStateChange": onPlayerStateChange
-      }
-    });
-  };
-
-  function onPlayerReady() {
-    playerReady = true;
-    if (videoList.length > 0) {
-      loadVideo(0);
-    }
-  }
-
-  function onPlayerStateChange(event) { 
-    if (event.data === YT.PlayerState.ENDED) {
-      nextVideo();
-    }
-  }
-
-  // Chargement des vidéos depuis YouTube
-  document.body.classList.add('loading');
-  
-  fetch(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`)
-    .then(res => {
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json();
-    })
-    .then(data => {
-      document.body.classList.remove('loading');
-      
-      if (!data.items || data.items.length === 0) {
-        throw new Error('Aucune vidéo trouvée');
-      }
-      
-      const thumbnailsContainer = document.getElementById("thumbnails");
-      thumbnailsContainer.innerHTML = '';
-      
-      data.items.forEach(item => {
-        if (item.id.videoId) {
-          const videoId = item.id.videoId;
-          const title = item.snippet.title;
-          const thumbnailUrl = item.snippet.thumbnails.medium.url;
-          
-          videoList.push({ id: videoId, title, thumbnail: thumbnailUrl });
-          
-          const thumb = document.createElement("div");
-          thumb.classList.add("thumbnail");
-          thumb.innerHTML = `<img src="${thumbnailUrl}" alt="${title.replace(/[<>]/g, '')}" title="${title.replace(/[<>]/g, '')}" loading="lazy">`;
-          thumb.addEventListener("click", () => {
-            const idx = videoList.findIndex(v => v.id === videoId);
-            if (idx !== -1) loadVideo(idx);
-          });
-          thumbnailsContainer.appendChild(thumb);
+        'onReady': () => { playerReady = true; },
+        'onStateChange': (event) => {
+          if(event.data === YT.PlayerState.ENDED) nextVideo();
         }
-      });
-      
-      if (videoList.length === 0) {
-        throw new Error('Aucune vidéo valide');
       }
-      
-      // Si le player est déjà prêt, charger la première vidéo
-      if (playerReady && player) {
-        loadVideo(0);
-      }
-    })
-    .catch(err => {
-      document.body.classList.remove('loading');
-      console.error("Erreur API YouTube:", err);
-      
-      const thumbContainer = document.getElementById("thumbnails");
-      thumbContainer.innerHTML = `<div class="error-message">
-        ❌ Impossible de charger les vidéos.<br>
-        <small>Vérifiez votre connexion ou contactez l'administrateur.</small>
-      </div>`;
-      
-      document.getElementById("currentTitle").innerHTML = "⚠️ Vidéo temporairement indisponible";
     });
-
-  // Ajouter les événements pour les boutons
+  }
+  
+  // ===== UTILITAIRES =====
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+  
+  // ===== MODE SOMBRE =====
+  document.getElementById("toggleTheme").addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+  });
+  
+  if(localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark');
+  }
+  
+  // ===== BOUTONS =====
   document.getElementById("prevBtn").addEventListener("click", prevVideo);
   document.getElementById("nextBtn").addEventListener("click", nextVideo);
   
-  // Gestion du clavier (accessibilité)
-  document.addEventListener('keydown', (e) => {
-    const activeSection = document.querySelector('.content-section.active');
-    if (activeSection && activeSection.id === 'videos') {
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        prevVideo();
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        nextVideo();
-      }
-    }
-  });
+  // ===== DÉMARRAGE =====
+  loadPlaylists();
 </script>
 </body>
 </html>
