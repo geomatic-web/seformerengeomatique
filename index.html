@@ -1049,15 +1049,24 @@
       
       playlists = [...allPlaylists];
       
-      for (let playlist of playlists) {
-        const detailsResp = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&id=${playlist.id}&part=contentDetails`);
-        const detailsData = await detailsResp.json();
-        playlist.videoCount = detailsData.items?.[0]?.contentDetails?.itemCount || 0;
-        
-        const itemsResp = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${playlist.id}&part=snippet&maxResults=1`);
-        const itemsData = await itemsResp.json();
-        playlist.thumbnail = itemsData.items?.[0]?.snippet?.thumbnails?.medium?.url || 'https://via.placeholder.com/50x50?text=SIG';
-      }
+      // Le nombre de vidéos est déjà fourni par le premier appel (part=contentDetails),
+      // inutile de le redemander playlist par playlist.
+      playlists.forEach(playlist => {
+        playlist.videoCount = playlist.contentDetails?.itemCount || 0;
+      });
+      
+      // Récupération des miniatures en parallèle, chaque échec est isolé
+      // pour ne pas faire échouer le chargement complet.
+      await Promise.all(playlists.map(async (playlist) => {
+        try {
+          const itemsResp = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${playlist.id}&part=snippet&maxResults=1`);
+          const itemsData = await itemsResp.json();
+          playlist.thumbnail = itemsData.items?.[0]?.snippet?.thumbnails?.medium?.url || 'https://via.placeholder.com/50x50?text=SIG';
+        } catch (e) {
+          console.error('Miniature indisponible pour', playlist.id, e);
+          playlist.thumbnail = 'https://via.placeholder.com/50x50?text=SIG';
+        }
+      }));
       
       renderPlaylistList();
       
