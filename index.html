@@ -117,13 +117,6 @@
     padding: 15px; 
     position: relative; 
   }
-  header img { 
-    width: 60px; 
-    border-radius: 50%; 
-    vertical-align: middle;
-    margin-right: 10px;
-    border: 2px solid #f39c12;
-  }
   .header-title { 
     display: flex; 
     align-items: center; 
@@ -325,16 +318,6 @@
     margin-bottom: 10px;
   }
 
-  /* MAIN LAYOUT */
-  .main-container {
-    display: flex;
-    max-width: 1400px;
-    margin: 20px auto;
-    padding: 0 15px;
-    gap: 20px;
-    flex: 1;
-  }
-
   footer {
     background: #2c3e50;
     color: white;
@@ -346,200 +329,6 @@
     color: #f39c12;
     text-decoration: none;
     margin: 0 10px;
-  }
-
-  /* PLAYLISTS SIDEBAR */
-  .playlists-sidebar {
-    width: 320px;
-    flex-shrink: 0;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    overflow: hidden;
-  }
-  .playlists-header {
-    background: #2c3e50;
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-    text-align: center;
-  }
-  .playlist-stats {
-    padding: 8px 15px;
-    background: #e8e8e8;
-    font-size: 0.85em;
-    text-align: center;
-  }
-  .search-box {
-    padding: 10px;
-  }
-  .search-box input {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    font-size: 0.9em;
-  }
-  .playlist-list {
-    flex: 1;
-    overflow-y: auto;
-    max-height: 500px;
-  }
-  .playlist-item {
-    padding: 12px 15px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .playlist-item:hover {
-    background: #f0f0f0;
-  }
-  .playlist-item.active {
-    background: #f39c12;
-    color: white;
-  }
-  .playlist-thumb {
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-  .playlist-info {
-    flex: 1;
-    min-width: 0;
-  }
-  .playlist-name {
-    font-weight: 500;
-    font-size: 0.9em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .playlist-count {
-    font-size: 0.7em;
-    opacity: 0.8;
-    margin-top: 4px;
-  }
-
-  /* VIDEO CONTENT */
-  .video-content {
-    flex: 1;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-  }
-  .main-video {
-    width: 100%;
-  }
-  .video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
-    background: #000;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-  }
-  #currentTitle {
-    margin: 15px 0;
-    font-size: 1.1em;
-    text-align: center;
-    word-wrap: break-word;
-  }
-  .controls {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin: 15px 0;
-    flex-wrap: wrap;
-  }
-  button {
-    background: #2c3e50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: all 0.3s;
-    font-weight: bold;
-    font-size: 14px;
-  }
-  button:hover {
-    background: #f39c12;
-    color: #2c3e50;
-  }
-  .share-btn {
-    background: #1da1f2;
-  }
-  .share-btn:hover {
-    background: #0c85d0;
-    color: white;
-  }
-
-  /* VIDEOS LIST */
-  .videos-list {
-    margin-top: 20px;
-    border-top: 2px solid #eee;
-    padding-top: 15px;
-  }
-  .videos-list h3 {
-    margin-bottom: 10px;
-    color: #2c3e50;
-    font-size: 1em;
-  }
-  .video-items {
-    max-height: 250px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .video-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.2s;
-  }
-  .video-item:hover {
-    background: #f0f0f0;
-  }
-  .video-item.active {
-    background: #f39c12;
-    color: white;
-  }
-  .video-thumb {
-    width: 80px;
-    height: 45px;
-    border-radius: 6px;
-    object-fit: cover;
-    flex-shrink: 0;
-    background: #ddd;
-  }
-  .video-title {
-    flex: 1;
-    font-size: 0.85em;
-    word-wrap: break-word;
-  }
-  .load-more {
-    text-align: center;
-    padding: 10px;
-    margin-top: 10px;
   }
 
   /* OTHER SECTIONS */
@@ -613,19 +402,10 @@
   body.dark {
     background: #121212;
   }
-  body.dark header, body.dark nav, body.dark .playlists-sidebar, body.dark .video-content, 
+  body.dark header, body.dark nav,
   body.dark .other-sections, body.dark .cv-section, body.dark .quick-contact {
     background: #1e1e2e;
     color: #e0e0e0;
-  }
-  body.dark .playlist-item {
-    border-bottom-color: #333;
-  }
-  body.dark .playlist-item:hover, body.dark .video-item:hover {
-    background: #2a2a3e;
-  }
-  body.dark .videos-list {
-    border-top-color: #333;
   }
   body.dark .contact-form input, body.dark .contact-form textarea {
     background: #2a2a3e;
@@ -636,9 +416,6 @@
     background: #2a2a3e;
     color: #f39c12;
   }
-  body.dark .playlist-stats {
-    background: #2a2a3e;
-  }
   body.dark .profile-text {
     background: #2a2a3e;
   }
@@ -648,16 +425,6 @@
 
   /* RESPONSIVE */
   @media (max-width: 768px) {
-    .main-container {
-      flex-direction: column;
-      padding: 0 10px;
-    }
-    .playlists-sidebar {
-      width: 100%;
-    }
-    .playlist-list {
-      max-height: 300px;
-    }
     .quick-contact {
       flex-direction: column;
       text-align: center;
@@ -669,7 +436,6 @@
 
 <header>
 <div class="header-title">
-<img src="https://yt3.googleusercontent.com/VxChhQvRzmupvTLcOsFHpqkec65NuyQ5mD4yNsnj5o5kqASVdvQHajq-ubhLYAoA1AGqH53I8tg=s88-c-k-c0x00ffffff-no-rj" alt="Jean-Baptiste KIBORA">
 <div>
 <h1>Jean-Baptiste KIBORA</h1>
 <div class="expert-tag">Consultant SIG & Développeur Full Stack | 10 ans d'expérience</div>
@@ -691,7 +457,6 @@
 <nav>
 <ul>
 <li><a href="#" onclick="showCV(); return false;">CV Complet</a></li>
-<li><a href="#" onclick="showMainContent(true); return false;">Tutoriels SIG</a></li>
 <li><a href="#" onclick="showOtherSection('projets'); return false;">Projets</a></li>
 <li><a href="#" onclick="showOtherSection('contact'); return false;">Contact</a></li>
 </ul>
@@ -894,40 +659,6 @@
 </div>
 </div>
 
-<div id="mainContent" class="main-container" style="display: none;">
-<div class="playlists-sidebar">
-<div class="playlists-header">Tutoriels SIG - ArcGIS & QGIS</div>
-<div class="playlist-stats" id="playlistStats"><span id="statsText">Chargement...</span></div>
-<div class="search-box">
-<input type="text" id="playlistSearch" placeholder=" Rechercher une playlist..." onkeyup="filterPlaylists()">
-</div>
-<div class="playlist-list" id="playlistList">
-<div style="text-align: center; padding: 20px;">Chargement des playlists...</div>
-</div>
-</div>
-
-<div class="video-content">
-<div class="main-video">
-<div class="video-container">
-<div id="mainPlayer"></div>
-</div>
-<h2 id="currentTitle"></h2>
-<div class="controls">
-<button id="prevBtn">Précédent</button>
-<button id="nextBtn">Suivant</button>
-<button id="shareBtn" class="share-btn">Partager</button>
-</div>
-</div>
-<div class="videos-list">
-<h3>Vidéos de la playlist</h3>
-<div class="video-items" id="videoItems"></div>
-<div class="load-more" id="loadMoreBtn" style="display: none;">
-<button onclick="loadMoreVideos()">Charger plus de vidéos</button>
-</div>
-</div>
-</div>
-</div>
-
 <div id="projets" class="other-sections">
 <h2>Projets Géomatique Réalisés</h2>
 <ul>
@@ -969,59 +700,15 @@
 </footer>
 
 <script>
-  const CHANNEL_ID = "UCwjUnlXoWvX4PAcMK2Xj4JA";
-  const API_KEY = "AIzaSyCpm3GRsd1InPjeFJgA9vANu3tPMY222p8";
-  
-  let playlists = [];
-  let allPlaylists = [];
-  let currentPlaylistId = null;
-  let currentPlaylistVideos = [];
-  let allPlaylistVideos = [];
-  let currentVideoIndex = 0;
-  let player = null;
-  let playerReady = false;
-  let videoPageToken = null;
-  let playlistsLoaded = false;
-
-  function showMainContent(show) {
-    document.getElementById('mainContent').style.display = show ? 'flex' : 'none';
-    document.getElementById('cvExpert').style.display = 'none';
-    document.querySelectorAll('.other-sections').forEach(s => s.classList.remove('active'));
-    if (show && !playlistsLoaded) {
-      playlistsLoaded = true;
-      loadYouTubeApi();
-      loadPlaylists();
-    }
-    if (show && player && playerReady) {
-      setTimeout(() => {
-        const iframe = document.querySelector('#mainPlayer iframe');
-        if (iframe) {
-          iframe.style.width = '100%';
-          iframe.style.height = '100%';
-        }
-      }, 100);
-    }
-  }
-
   function showCV() {
-    document.getElementById('mainContent').style.display = 'none';
     document.querySelectorAll('.other-sections').forEach(s => s.classList.remove('active'));
     document.getElementById('cvExpert').style.display = 'block';
   }
 
   function showOtherSection(sectionId) {
-    document.getElementById('mainContent').style.display = 'none';
     document.getElementById('cvExpert').style.display = 'none';
     document.querySelectorAll('.other-sections').forEach(s => s.classList.remove('active'));
     document.getElementById(sectionId).classList.add('active');
-  }
-
-  function showToast(message) {
-    const toast = document.createElement('div');
-    toast.className = 'toast-message';
-    toast.textContent = message;
-    document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 2000);
   }
 
   function genererCV() {
@@ -1036,252 +723,12 @@
     win.print();
   }
 
-  async function loadPlaylists() {
-    try {
-      const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,contentDetails&maxResults=50`);
-      const data = await response.json();
-      
-      if (data.error) {
-        document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;color:red;">Erreur de chargement</div>';
-        return;
-      }
-      
-      allPlaylists = data.items || [];
-      allPlaylists.sort((a, b) => {
-        const numA = parseInt(a.snippet.title.match(/\d+/)?.[0] || 0);
-        const numB = parseInt(b.snippet.title.match(/\d+/)?.[0] || 0);
-        return numA - numB;
-      });
-      
-      playlists = [...allPlaylists];
-      
-      // Le nombre de vidéos est déjà fourni par le premier appel (part=contentDetails),
-      // inutile de le redemander playlist par playlist.
-      const placeholder = 'https://via.placeholder.com/50x50?text=SIG';
-      playlists.forEach(playlist => {
-        playlist.videoCount = playlist.contentDetails?.itemCount || 0;
-        playlist.thumbnail = placeholder;
-      });
-      
-      // On affiche tout de suite la liste et on lance la vidéo, sans attendre
-      // les miniatures : c'est ce qui rendait le chargement lent auparavant.
-      renderPlaylistList();
-      
-      const totalVideos = playlists.reduce((sum, p) => sum + (p.videoCount || 0), 0);
-      document.getElementById('statsText').textContent = `${playlists.length} playlists | ${totalVideos} vidéos`;
-      
-      const savedPlaylistId = localStorage.getItem('lastPlaylistId');
-      if (savedPlaylistId && playlists.find(p => p.id === savedPlaylistId)) {
-        selectPlaylist(savedPlaylistId);
-      } else if (playlists[0]) {
-        selectPlaylist(playlists[0].id);
-      }
-      
-      // Miniatures chargées en arrière-plan, chaque échec est isolé pour ne
-      // pas bloquer les autres ; chaque image se met à jour dès qu'elle arrive.
-      playlists.forEach(async (playlist) => {
-        try {
-          const itemsResp = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${playlist.id}&part=snippet&maxResults=1`);
-          const itemsData = await itemsResp.json();
-          const url = itemsData.items?.[0]?.snippet?.thumbnails?.medium?.url || placeholder;
-          playlist.thumbnail = url;
-          const img = document.querySelector(`.playlist-item[data-id="${playlist.id}"] .playlist-thumb`);
-          if (img) img.src = url;
-        } catch (e) {
-          console.error('Miniature indisponible pour', playlist.id, e);
-        }
-      });
-      
-    } catch (err) {
-      console.error(err);
-      document.getElementById('playlistList').innerHTML = '<div style="padding:20px;text-align:center;color:red;">Erreur réseau</div>';
-    }
-  }
-
-  function renderPlaylistList() {
-    const container = document.getElementById('playlistList');
-    container.innerHTML = '';
-    
-    playlists.forEach((playlist) => {
-      const div = document.createElement('div');
-      div.className = 'playlist-item';
-      div.dataset.id = playlist.id;
-      if (currentPlaylistId === playlist.id) div.classList.add('active');
-      div.innerHTML = `
-        <img class="playlist-thumb" src="${playlist.thumbnail}" alt="${escapeHtml(playlist.snippet.title)}" onerror="this.src='https://via.placeholder.com/50x50?text=SIG'">
-        <div class="playlist-info">
-          <div class="playlist-name">${escapeHtml(playlist.snippet.title)}</div>
-          <div class="playlist-count"> ${playlist.videoCount || 0} vidéos</div>
-        </div>
-      `;
-      div.onclick = () => selectPlaylist(playlist.id);
-      container.appendChild(div);
-    });
-  }
-
-  function filterPlaylists() {
-    const searchTerm = document.getElementById('playlistSearch').value.toLowerCase();
-    playlists = searchTerm ? allPlaylists.filter(p => p.snippet.title.toLowerCase().includes(searchTerm)) : [...allPlaylists];
-    renderPlaylistList();
-  }
-
-  async function selectPlaylist(playlistId) {
-    currentPlaylistId = playlistId;
-    localStorage.setItem('lastPlaylistId', playlistId);
-    renderPlaylistList();
-    
-    document.getElementById('videoItems').innerHTML = '<div style="text-align:center;padding:20px;">Chargement des vidéos...</div>';
-    document.getElementById('loadMoreBtn').style.display = 'none';
-    videoPageToken = null;
-    allPlaylistVideos = [];
-    
-    await loadPlaylistVideos(playlistId, true);
-    
-    const savedVideoIndex = localStorage.getItem(`video_${playlistId}`);
-    if (allPlaylistVideos.length > 0) {
-      const startIndex = savedVideoIndex ? parseInt(savedVideoIndex) : 0;
-      playVideoFromPlaylist(Math.min(startIndex, allPlaylistVideos.length - 1));
-    } else {
-      document.getElementById('currentTitle').textContent = "Aucune vidéo dans cette playlist";
-    }
-  }
-
-  async function loadPlaylistVideos(playlistId, reset = true) {
-    try {
-      let url = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${playlistId}&part=snippet&maxResults=50`;
-      if (!reset && videoPageToken) url += `&pageToken=${videoPageToken}`;
-      
-      const response = await fetch(url);
-      const data = await response.json();
-      if (data.error) throw new Error(data.error.message);
-      
-      const newVideos = data.items.filter(item => item.snippet.resourceId.videoId).map(item => ({
-        id: item.snippet.resourceId.videoId,
-        title: item.snippet.title,
-        thumbnail: item.snippet.thumbnails?.medium?.url || item.snippet.thumbnails?.default?.url || 'https://via.placeholder.com/120x68?text=Video'
-      }));
-      
-      if (reset) allPlaylistVideos = newVideos;
-      else allPlaylistVideos = [...allPlaylistVideos, ...newVideos];
-      
-      currentPlaylistVideos = allPlaylistVideos;
-      videoPageToken = data.nextPageToken || null;
-      
-      renderVideoList();
-      document.getElementById('loadMoreBtn').style.display = (videoPageToken && allPlaylistVideos.length < 200) ? 'block' : 'none';
-      
-    } catch (err) {
-      console.error(err);
-      document.getElementById('videoItems').innerHTML = '<div style="padding:20px;text-align:center;color:red;">Erreur de chargement</div>';
-    }
-  }
-
-  function loadMoreVideos() {
-    if (currentPlaylistId && videoPageToken) loadPlaylistVideos(currentPlaylistId, false);
-  }
-
-  function renderVideoList() {
-    const videoContainer = document.getElementById('videoItems');
-    videoContainer.innerHTML = '';
-    
-    currentPlaylistVideos.forEach((video, index) => {
-      const div = document.createElement('div');
-      div.className = 'video-item';
-      if (index === currentVideoIndex) div.classList.add('active');
-      div.innerHTML = `
-        <img class="video-thumb" src="${video.thumbnail}" alt="${escapeHtml(video.title)}" onerror="this.src='https://via.placeholder.com/120x68?text=SIG'">
-        <span class="video-title">${escapeHtml(video.title.substring(0, 60))}${video.title.length > 60 ? '...' : ''}</span>
-      `;
-      div.onclick = () => playVideoFromPlaylist(index);
-      videoContainer.appendChild(div);
-    });
-  }
-
-  function playVideoFromPlaylist(index) {
-    if (!currentPlaylistVideos[index]) return;
-    currentVideoIndex = index;
-    const video = currentPlaylistVideos[index];
-    localStorage.setItem(`video_${currentPlaylistId}`, index);
-    
-    if (player && playerReady) player.loadVideoById(video.id);
-    document.getElementById('currentTitle').textContent = video.title;
-    
-    renderVideoList();
-  }
-  
-  function prevVideo() {
-    if (currentPlaylistVideos.length === 0) return;
-    playVideoFromPlaylist((currentVideoIndex - 1 + currentPlaylistVideos.length) % currentPlaylistVideos.length);
-  }
-  
-  function nextVideo() {
-    if (currentPlaylistVideos.length === 0) return;
-    playVideoFromPlaylist((currentVideoIndex + 1) % currentPlaylistVideos.length);
-  }
-
-  function shareVideo() {
-    if (currentPlaylistVideos[currentVideoIndex]) {
-      navigator.clipboard.writeText(`https://www.youtube.com/watch?v=${currentPlaylistVideos[currentVideoIndex].id}`);
-      showToast(' Lien copié dans le presse-papier !');
-    }
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (document.getElementById('mainContent').style.display !== 'flex') return;
-    if (e.key === 'ArrowLeft') { e.preventDefault(); prevVideo(); }
-    else if (e.key === 'ArrowRight') { e.preventDefault(); nextVideo(); }
-    else if (e.key === ' ' || e.key === 'Space') {
-      e.preventDefault();
-      if (player && playerReady) {
-        player.getPlayerState() === YT.PlayerState.PLAYING ? player.pauseVideo() : player.playVideo();
-      }
-    }
-  });
-
-  let youtubeApiRequested = false;
-  function loadYouTubeApi() {
-    if (youtubeApiRequested) return;
-    youtubeApiRequested = true;
-    let tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
-  }
-  
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player("mainPlayer", {
-      videoId: "",
-      playerVars: { 'origin': window.location.origin || window.location.protocol + '//' + window.location.host },
-      events: {
-        'onReady': () => {
-          playerReady = true;
-          const iframe = document.querySelector('#mainPlayer iframe');
-          if (iframe) {
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-          }
-        },
-        'onStateChange': (event) => { if (event.data === YT.PlayerState.ENDED) nextVideo(); }
-      }
-    });
-  }
-  
-  function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
-  }
-  
   document.getElementById("toggleTheme").addEventListener("click", () => {
     document.body.classList.toggle("dark");
     localStorage.setItem('darkMode', document.body.classList.contains('dark'));
   });
-  
-  if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark');
-  
-  document.getElementById("prevBtn").addEventListener("click", prevVideo);
-  document.getElementById("nextBtn").addEventListener("click", nextVideo);
-  document.getElementById("shareBtn").addEventListener("click", shareVideo);
 
+  if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark');
 </script>
 </body>
 </html>
