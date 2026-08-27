@@ -1057,23 +1057,14 @@
       
       // Le nombre de vidéos est déjà fourni par le premier appel (part=contentDetails),
       // inutile de le redemander playlist par playlist.
+      const placeholder = 'https://via.placeholder.com/50x50?text=SIG';
       playlists.forEach(playlist => {
         playlist.videoCount = playlist.contentDetails?.itemCount || 0;
+        playlist.thumbnail = placeholder;
       });
       
-      // Récupération des miniatures en parallèle, chaque échec est isolé
-      // pour ne pas faire échouer le chargement complet.
-      await Promise.all(playlists.map(async (playlist) => {
-        try {
-          const itemsResp = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${playlist.id}&part=snippet&maxResults=1`);
-          const itemsData = await itemsResp.json();
-          playlist.thumbnail = itemsData.items?.[0]?.snippet?.thumbnails?.medium?.url || 'https://via.placeholder.com/50x50?text=SIG';
-        } catch (e) {
-          console.error('Miniature indisponible pour', playlist.id, e);
-          playlist.thumbnail = 'https://via.placeholder.com/50x50?text=SIG';
-        }
-      }));
-      
+      // On affiche tout de suite la liste et on lance la vidéo, sans attendre
+      // les miniatures : c'est ce qui rendait le chargement lent auparavant.
       renderPlaylistList();
       
       const totalVideos = playlists.reduce((sum, p) => sum + (p.videoCount || 0), 0);
@@ -1085,6 +1076,21 @@
       } else if (playlists[0]) {
         selectPlaylist(playlists[0].id);
       }
+      
+      // Miniatures chargées en arrière-plan, chaque échec est isolé pour ne
+      // pas bloquer les autres ; chaque image se met à jour dès qu'elle arrive.
+      playlists.forEach(async (playlist) => {
+        try {
+          const itemsResp = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${playlist.id}&part=snippet&maxResults=1`);
+          const itemsData = await itemsResp.json();
+          const url = itemsData.items?.[0]?.snippet?.thumbnails?.medium?.url || placeholder;
+          playlist.thumbnail = url;
+          const img = document.querySelector(`.playlist-item[data-id="${playlist.id}"] .playlist-thumb`);
+          if (img) img.src = url;
+        } catch (e) {
+          console.error('Miniature indisponible pour', playlist.id, e);
+        }
+      });
       
     } catch (err) {
       console.error(err);
@@ -1099,6 +1105,7 @@
     playlists.forEach((playlist) => {
       const div = document.createElement('div');
       div.className = 'playlist-item';
+      div.dataset.id = playlist.id;
       if (currentPlaylistId === playlist.id) div.classList.add('active');
       div.innerHTML = `
         <img class="playlist-thumb" src="${playlist.thumbnail}" alt="${escapeHtml(playlist.snippet.title)}" onerror="this.src='https://via.placeholder.com/50x50?text=SIG'">
